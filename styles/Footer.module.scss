@@ -1,0 +1,87 @@
+@import "variables";
+
+.footer {
+  position: relative;
+  width: 100%;
+  height: 78.963vh;
+  min-height: 739.88px;
+  &__title {
+    align-self: flex-end;
+    transform: translateX(10px);
+    width: 31.75vw;
+    height: auto;
+    margin-right: -57px;
+    margin-top: 284.87px;
+    line-height: 110%;
+    color: $light-grey-color;
+  }
+  .mobileApp {
+    position: absolute;
+    width: 527.9px;
+    height: auto;
+    left: 21.278vw;
+    top: 104.16px;
+    z-index: 91;
+    @media (max-width: 1200px) {
+      left: 20px;
+    }
+  }
+  .glasses {
+    width: 5.31vw;
+    height: 9.178vh;
+    left: 27.563vw;
+    top: 15.731vh;
+  }
+  .printer {
+    width: 3.949vw;
+    height: 8.359vh;
+    left: 9.24vw;
+    top: 37.891vh;
+  }
+  .shirt {
+    width: 5.131vw;
+    height: 9.819vh;
+    left: 16.59vw;
+    top: 69.332vh;
+  }
+  .plant {
+    width: 5.654vw;
+    height: 12.487vh;
+    left: 72.55vw;
+    top: 8.607vh;
+    z-index: -1;
+  }
+  .chair {
+    width: 4.764vw;
+    height: 8.111vh;
+    left: 44.25vw;
+    top: 73.072vh;
+  }
+  .pad {
+    width: 4.974vw;
+    height: 9.178vh;
+    left: 81.9vw;
+    top: 62.287vh;
+  }
+  .copyright {
+    display: flex;
+    position: absolute;
+    left: 67.95vw;
+    top: 731.88px;
+    gap: 8px;
+    align-items: flex-end;
+    p {
+      width: 92px;
+      height: 26px;
+      font-size: 16px;
+      color: $light-brown-color;
+      transform: translateY(-1px);
+    }
+
+    &::after {
+      content: url("../public/images/footer/gco-footer-logo.svg");
+      height: 32.15px;
+      width: 22px;
+    }
+  }
+}
