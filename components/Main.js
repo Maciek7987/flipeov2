@@ -1,9 +1,9 @@
 import styles from "../styles/Main.module.scss";
 import Image from "next/future/image";
 
-import firstLine from "../public/images/main/Vector 1-line.svg";
-import secondLine from "../public/images/main/Vector 4-line.svg";
-import thirdLine from "../public/images/main/Vector 6-line.svg";
+import firstLine from "../public/images/main/Vector1-line.svg";
+import secondLine from "../public/images/main/Vector4-line.svg";
+import thirdLine from "../public/images/main/Vector6-line.svg";
 import step1 from "../public/images/main/step1_all.svg";
 import step2 from "../public/images/main/step2_all.svg";
 import step3 from "../public/images/main/step3_all.png";
@@ -23,7 +23,7 @@ export default function Header() {
         <article className={`${styles.article} ${styles.main__firstStep}`}>
           <div className={styles.images}>
             <Image className={styles.firstLine} src={firstLine} alt="" />
-            <Image className={styles.img} src={step1} alt="" />
+            <Image priority={true} className={styles.img} src={step1} alt="" />
           </div>
           <div className={styles.wrapForArticle}>
             <h3 className={styles.article__title}>

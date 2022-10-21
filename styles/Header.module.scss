@@ -33,7 +33,10 @@
       color: $green-color;
       padding: 15px 23px 16px 23px;
       letter-spacing: -0.1px;
-      transition: 0.2s;
+      transition: border backgorund-color color 0.2s;
+      @media (max-width: 1200px) {
+        transform: scale(0.8);
+      }
       &:hover {
         border: 1px solid $green-color;
         background-color: $green-color;
@@ -56,7 +59,7 @@
       top: 1.605vh;
       left: 0.99vw;
       width: 10.54vw;
-      height: auto;
+      height: auto !important;
       opacity: 92%;
       z-index: 98;
     }

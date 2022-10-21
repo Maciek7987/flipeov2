@@ -1,0 +1,134 @@
+@import "variables";
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  &__email {
+    position: relative;
+    width: 471.75px;
+    height: 54px;
+    margin-bottom: 10px;
+    border-radius: 100px;
+    background-color: $light-grey-color;
+  }
+  &__emailImg {
+    position: absolute;
+    top: 15px;
+    left: 17px;
+    width: 24px;
+    height: 24px;
+  }
+  &__emailInput {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding-left: 56px;
+    border: 1px solid transparent;
+    border-radius: 100px;
+    font-family: "DM Sans", sans-serif;
+    color: $light-brown-color;
+    background-color: transparent;
+    font-size: 16px;
+    z-index: 1;
+    @media (max-width: 1200px) {
+      font-size: 14px;
+    }
+    &:focus {
+      outline: none;
+      box-shadow: 0px 1px 8px rgba(44, 22, 0, 0.08),
+        0px 6px 8px rgba(44, 22, 0, 0.06), 0px 8px 9px rgba(44, 22, 0, 0.02),
+        0px 3px 4px rgba(44, 22, 0, 0.04);
+    }
+  }
+  &__emailSubmit {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 130px;
+    height: 100%;
+    padding-bottom: 1px;
+    border: 1px solid $light-brown-color;
+    line-height: 21px;
+    text-align: center;
+    color: $green-color;
+    background-color: #fff;
+    z-index: 2;
+    transition: 0.2s;
+    &:hover {
+      color: $orange-color;
+      background-color: $green-color;
+    }
+  }
+  input[aria-invalid="true"] {
+    border-color: $error-red-color;
+  }
+}
+.invalid {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 5px;
+  padding-left: 29px;
+  color: $error-red-color;
+}
+.inner {
+  margin-bottom: 10px;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  input[aria-invalid="true"] + label .boxPath {
+    stroke: $error-red-color;
+  }
+  input[type="checkbox"] {
+    display: none;
+    pointer-events: none;
+    & + label {
+      position: relative;
+      cursor: pointer;
+      display: grid;
+      grid-template-columns: auto 1fr;
+      svg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 24px;
+        height: 24px;
+        margin-right: 5px;
+        fill: none;
+      }
+      .checkBg {
+        stroke: none;
+        fill: none;
+      }
+      .checkTick {
+        stroke-dasharray: 70;
+        stroke-dashoffset: 70;
+      }
+      span {
+        margin-left: 29px;
+        font-family: "DM Sans";
+        color: $light-brown-color;
+        font-size: 16px;
+        @media (max-width: 1200px) {
+          font-size: 14px;
+        }
+        a {
+          text-decoration: none;
+          color: $orange-color;
+        }
+      }
+    }
+    &:checked + label {
+      .checkBg {
+        stroke: $green-color;
+        fill: $green-color;
+      }
+      .checkTick {
+        stroke-dasharray: 70;
+        stroke-dashoffset: 0;
+      }
+    }
+  }
+}

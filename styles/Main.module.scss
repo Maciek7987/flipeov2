@@ -24,10 +24,12 @@
     position: relative;
     display: flex;
     justify-content: center;
+    height: auto;
     gap: 129.49px;
     align-items: center;
     .wrapForArticle {
       width: 100%;
+      height: auto;
       @media (max-width: 1200px) {
         width: 32%;
       }
@@ -42,7 +44,6 @@
       justify-content: flex-start;
       gap: 3.25%;
       .leaf {
-        // width: auto;
         height: 100%;
         transform: translateY(50%);
       }
@@ -181,11 +182,13 @@
     left: 0;
     top: 62.434vh;
     width: 21.152vw;
+    height: auto;
     z-index: 90;
   }
   .leafRight {
     position: absolute;
     width: 19.634vw;
+    height: auto;
     right: -10px;
     bottom: 0.5vh;
     z-index: 90;

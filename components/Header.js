@@ -1,10 +1,12 @@
+import { useEffect } from "react";
+
 import styles from "../styles/Header.module.scss";
 import Image from "next/future/image";
 
 import flipeoLogo from "../public/images/header/flipeoLogo.svg";
-import mainLogo from "../public/images/header/Group 110-mainIMG-logo.svg";
-import leafUnder from "../public/images/header/Group 111-leaf-under-picture.svg";
-import woman from "../public/images/header/Group 111-picture-of-woman.png";
+import mainLogo from "../public/images/header/Group110-mainIMG-logo.svg";
+import leafUnder from "../public/images/header/Group111-leaf-under-picture.svg";
+import woman from "../public/images/header/Group111-picture-of-woman.png";
 import leavesLeft__blur from "../public/images/header/leaves-left/blur.png";
 import leavesLeft__dark from "../public/images/header/leaves-left/dark-green.svg";
 import leavesLeft__light from "../public/images/header/leaves-left/light-green.svg";
@@ -20,6 +22,18 @@ import earphones from "../public/images/header/icons/sluchawki-6.svg";
 import pad from "../public/images/header/icons/pad-7.svg";
 
 export default function Header() {
+  let height;
+  const responsive = () => {
+    height = document.documentElement.clientHeight;
+  };
+  useEffect(() => {
+    responsive();
+    window.addEventListener("resize", responsive);
+  });
+  const scroll = () => {
+    console.log(height);
+    window.scroll({ top: height * 3.58, behavior: "smooth" });
+  };
   return (
     <header className={styles.header}>
       <div className={`wrapper ${styles.wrapper}`}>
@@ -29,18 +43,20 @@ export default function Header() {
           alt="logo flipeo"
         />
         <Image className={styles.header__logo} src={mainLogo} alt="" />
-
         <main className={styles.header__main}>
           <div className={styles.left}>
             <h1 className={styles.header__mainTitle}>
               Wymieniaj się <br />z innymi!
             </h1>
-            <button className={`btn ${styles.btn}`}>Bądź na bieżąco</button>
+            <button onClick={scroll} className={`btn ${styles.btn}`}>
+              Bądź na bieżąco
+            </button>
           </div>
           <div className={styles.header__mainGreenBg}>
             <Image className={styles.leaf} src={leafUnder} alt="" />
             <Image
               className={styles.woman}
+              priority={true}
               src={woman}
               alt="woman with a flower"
             />
@@ -71,7 +87,12 @@ export default function Header() {
         />
       </div>
 
-      <Image className={styles.leavesRight} src={leavesRight} alt="" />
+      <Image
+        className={styles.leavesRight}
+        priority={true}
+        src={leavesRight}
+        alt=""
+      />
       <Image className={styles.leafBottom} src={leafBottom} alt="" />
       <Image className={styles.leafTop} src={leafTop} alt="" />
       <Image className={`icon ${styles.glasses}`} src={glasses} alt="" />
