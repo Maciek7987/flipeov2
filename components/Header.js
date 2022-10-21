@@ -1,5 +1,3 @@
-import { useEffect } from "react";
-
 import styles from "../styles/Header.module.scss";
 import Image from "next/future/image";
 
@@ -22,17 +20,8 @@ import earphones from "../public/images/header/icons/sluchawki-6.svg";
 import pad from "../public/images/header/icons/pad-7.svg";
 
 export default function Header() {
-  let height;
-  const responsive = () => {
-    height = document.documentElement.clientHeight;
-  };
-  useEffect(() => {
-    responsive();
-    window.addEventListener("resize", responsive);
-  });
   const scroll = () => {
-    console.log(height);
-    window.scroll({ top: height * 3.58, behavior: "smooth" });
+    window.scroll({ top: 3230, behavior: "smooth" });
   };
   return (
     <header className={styles.header}>
