@@ -13,27 +13,13 @@ import leavesRight from "../public/images/section/leaves-right.png";
 
 export default function Section() {
   let [number, setNumber] = useState(4);
-  let [widthWrap, setWidthWrap] = useState(1512);
-  let [widthSlider, setWidthSlider] = useState(1128);
+
   const responsive = () => {
-    const width = document.body.clientWidth;
-    if (width <= 952) {
-      setWidthWrap((widthWrap = 1512 - 864));
-      setWidthSlider((widthSlider = 1128 - 864));
-      setNumber((number = 1));
-    } else if (width <= 1239) {
-      setWidthWrap((widthWrap = 1512 - 576));
-      setWidthSlider((widthSlider = 1128 - 576));
-      setNumber((number = 2));
-    } else if (width <= 1527) {
-      setWidthWrap((widthWrap = 1512 - 288));
-      setWidthSlider((widthSlider = 1128 - 288));
-      setNumber((number = 3));
-    } else if (width > 1527) {
-      setWidthWrap((widthWrap = 1512));
-      setWidthSlider((widthSlider = 1128));
-      setNumber((number = 4));
-    }
+    const width = window.innerWidth;
+    if (width <= 962) setNumber((number = 1));
+    else if (width <= 1249) setNumber((number = 2));
+    else if (width <= 1537) setNumber((number = 3));
+    else if (width > 1537) setNumber((number = 4));
   };
   useEffect(() => {
     responsive();
@@ -41,10 +27,7 @@ export default function Section() {
   });
   return (
     <section className={styles.section}>
-      <div
-        style={{ width: `${widthWrap}px` }}
-        className={`wrapper ${styles.wrapper}`}
-      >
+      <div className={`wrapper ${styles.wrapper}`}>
         <div className={styles.section__greenBg}>
           <Image
             className={styles.img}
@@ -53,7 +36,7 @@ export default function Section() {
           />
           <h2 className={styles.title}>Popularne przedmioty na flipeo.io</h2>
         </div>
-        <div style={{ width: `${widthSlider}px` }} className={styles.slider}>
+        <div className={styles.slider}>
           <Slider number={number}></Slider>
         </div>
       </div>

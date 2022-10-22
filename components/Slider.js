@@ -10,7 +10,7 @@ import hoodieTwo from "../public/images/section/product-image-2.png";
 import shoes from "../public/images/section/product-image-3.png";
 import blouse from "../public/images/section/product-image-4.png";
 //Photo by Simon Trappe: https://www.pexels.com/photo/overhead-shot-of-the-playstation-1-5700767/
-import ps1 from "../public/images/section/pexels-simon-trappe-5700767.jpg"; 
+import ps1 from "../public/images/section/pexels-simon-trappe-5700767.jpg";
 //Photo by Sergei A: https://www.pexels.com/photo/photo-of-red-bike-parked-on-road-beside-grass-field-2539400/
 import bike from "../public/images/section/pexels-sergei-a-2539400.jpg";
 import books from "../public/images/section/product-image-7.jpg";
@@ -111,7 +111,9 @@ export default function Slider({ number }) {
           <Product
             src={bike}
             alt={"bike"}
-            paragraphElement={<p>Czerwony rower firmstrong, retro, jak nowy</p>}
+            paragraphElement={
+              <p>Czerwony rower firmstrong, retro, vintage, jak nowy b...</p>
+            }
             numberProduct={"sixth"}
             numberFirst={194}
             numberSecond={3}
@@ -122,7 +124,7 @@ export default function Slider({ number }) {
             src={books}
             alt={"books"}
             paragraphElement={
-              <p>Cała kolekcja komiksów kaczor doland</p>
+              <p>Cała kolekcja komiksów kaczor doland, niepowtar...</p>
             }
             numberProduct={"seventh"}
             numberFirst={325}

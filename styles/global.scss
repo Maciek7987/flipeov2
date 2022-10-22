@@ -204,6 +204,9 @@ input {
   @media (max-width: 1239px) {
     left: calc(58px) !important;
   }
+  @media (max-width: 678px) {
+    left: 77px !important;
+  }
   &:hover {
     background-color: $green-color;
     background-image: url("../public/images/section/buttonsArrow/left/Property1=hover.svg");
@@ -223,7 +226,10 @@ input {
   background-size: cover;
   transition: 0.2s ease-in-out;
   @media (max-width: 952px) {
-    left: calc(118px) !important;
+    left: 118px !important;
+  }
+  @media (max-width: 678px) {
+    left: 137px !important;
   }
   &:hover {
     background-color: $green-color;
