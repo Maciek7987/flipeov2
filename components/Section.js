@@ -40,7 +40,7 @@ export default function Section() {
           <Slider number={number}></Slider>
         </div>
       </div>
-      <div className={styles.newsletter}>
+      <div id="newsletter" className={styles.newsletter}>
         <Image className={styles.newsletter__img} src={newsletter} alt="" />
         <h2 className={styles.newsletter__title}>Newsletter</h2>
         <p className={styles.newsletter__description}>

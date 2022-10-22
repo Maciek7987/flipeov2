@@ -21,7 +21,9 @@ import pad from "../public/images/header/icons/pad-7.svg";
 
 export default function Header() {
   const scroll = () => {
-    window.scroll({ top: 3230, behavior: "smooth" });
+    document
+      .querySelector("#newsletter")
+      .scrollIntoView({ behavior: "smooth", block: "center" });
   };
   return (
     <header className={styles.header}>
