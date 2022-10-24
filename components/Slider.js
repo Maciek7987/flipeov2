@@ -37,15 +37,33 @@ function Product({
     </>
   );
 }
-export default function Slider({ number }) {
+export default function Slider() {
   return (
     <>
       <Swiper
-        slidesPerView={number}
+        slidesPerView={4}
         spaceBetween={24}
         navigation={true}
         modules={[Navigation]}
         className="mySwiper"
+        breakpoints={{
+          264: {
+            width: 264,
+            slidesPerView: 1,
+          },
+          552: {
+            width: 552,
+            slidesPerView: 2,
+          },
+          840: {
+            width: 840,
+            slidesPerView: 3,
+          },
+          1128: {
+            width: 1128,
+            slidesPerView: 4,
+          },
+        }}
       >
         <SwiperSlide>
           <Product
@@ -57,7 +75,7 @@ export default function Slider({ number }) {
             numberProduct={"first"}
             numberFirst={234}
             numberSecond={2}
-          ></Product>
+          />
         </SwiperSlide>
         <SwiperSlide>
           <Product
@@ -69,7 +87,7 @@ export default function Slider({ number }) {
             numberProduct={"second"}
             numberFirst={124}
             numberSecond={0}
-          ></Product>
+          />
         </SwiperSlide>
         <SwiperSlide>
           <Product
@@ -81,7 +99,7 @@ export default function Slider({ number }) {
             numberProduct={"third"}
             numberFirst={179}
             numberSecond={4}
-          ></Product>
+          />
         </SwiperSlide>
         <SwiperSlide>
           <Product
@@ -93,7 +111,7 @@ export default function Slider({ number }) {
             numberProduct={"fourth"}
             numberFirst={597}
             numberSecond={2}
-          ></Product>
+          />
         </SwiperSlide>
         <SwiperSlide>
           <Product
@@ -105,7 +123,7 @@ export default function Slider({ number }) {
             numberProduct={"fifth"}
             numberFirst={1022}
             numberSecond={1}
-          ></Product>
+          />
         </SwiperSlide>
         <SwiperSlide>
           <Product
@@ -117,7 +135,7 @@ export default function Slider({ number }) {
             numberProduct={"sixth"}
             numberFirst={194}
             numberSecond={3}
-          ></Product>
+          />
         </SwiperSlide>
         <SwiperSlide>
           <Product
@@ -129,7 +147,7 @@ export default function Slider({ number }) {
             numberProduct={"seventh"}
             numberFirst={325}
             numberSecond={0}
-          ></Product>
+          />
         </SwiperSlide>
       </Swiper>
     </>

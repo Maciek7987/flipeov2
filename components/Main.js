@@ -17,7 +17,7 @@ export default function Header() {
     <section className={styles.main}>
       <div className={`wrapper ${styles.wrapper}`}>
         <h2 className={styles.main__title}>
-          Wystawiaj swoje przedmioty <br />i wybieraj przedmioty innych
+          Wystawiaj swoje przedmioty i wybieraj przedmioty innych
         </h2>
 
         <article className={`${styles.article} ${styles.main__firstStep}`}>
@@ -27,7 +27,7 @@ export default function Header() {
           </div>
           <div className={styles.wrapForArticle}>
             <h3 className={styles.article__title}>
-              Na flipeo.io łączymy radość dawania <br />i radość wybierania.
+              Na flipeo.io łączymy radość dawania i radość wybierania.
             </h3>
             <div className={styles.wrapForText}>
               <div className={styles.leaf}>
@@ -35,8 +35,7 @@ export default function Header() {
               </div>
               <p className={styles.article__description}>
                 Są tacy którzy twierdzą że to niemożliwe, cóż, nic na to nie
-                poradzimy,
-                <br />a dla wszystkich pozostałych mamy propozycję
+                poradzimy, a dla wszystkich pozostałych mamy propozycję
                 <span>- Flipeo.io</span>
               </p>
             </div>
@@ -46,8 +45,8 @@ export default function Header() {
         <article className={`${styles.article} ${styles.main__secondStep}`}>
           <div className={styles.wrapForArticle}>
             <h3 className={styles.article__title}>
-              Flipeo.io to miejsce gdzie wymieniamy się ze <br />
-              sobą przedmiotami. Jak to działa ?
+              Flipeo.io to miejsce gdzie wymieniamy się ze sobą przedmiotami.
+              Jak to działa ?
             </h3>
             <div className={styles.wrapForText}>
               <div className={styles.leaf}>
@@ -75,8 +74,8 @@ export default function Header() {
           <div className={styles.wrapForArticle}>
             <h3 className={styles.article__title}>Flipeo.io Znajdź. Wymień.</h3>
             <p className={styles.article__description}>
-              Brzmi ciekawie? Zostaw mail a my, już wkrótce, <br />
-              poinformujemy cię o starcie platformy.
+              Brzmi ciekawie? Zostaw mail a my, już wkrótce, poinformujemy cię o
+              starcie platformy.
             </p>
           </div>
         </article>

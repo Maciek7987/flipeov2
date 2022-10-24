@@ -37,7 +37,7 @@ export default function Header() {
         <main className={styles.header__main}>
           <div className={styles.left}>
             <h1 className={styles.header__mainTitle}>
-              Wymieniaj się <br />z innymi!
+              Wymieniaj się z innymi!
             </h1>
             <button onClick={scroll} className={`btn ${styles.btn}`}>
               Bądź na bieżąco
