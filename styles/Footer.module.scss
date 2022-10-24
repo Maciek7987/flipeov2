@@ -4,7 +4,8 @@
   position: relative;
   width: 100%;
   min-height: 800px;
-  @media (max-width: 380px) {
+  overflow: hidden;
+  @media (max-width: $mobile) {
     min-height: 700px;
   }
   &__title {
@@ -16,7 +17,7 @@
     line-height: 110%;
     color: $light-grey-color;
     z-index: 99999;
-    @media (max-width: 678px) {
+    @media (max-width: $tablet) {
       top: 10%;
       left: 10%;
     }
@@ -28,10 +29,10 @@
     left: 21.278vw;
     top: 104.16px;
     z-index: 91;
-    @media (max-width: 1200px) {
+    @media (max-width: $laptop) {
       left: 20px;
     }
-    @media (max-width: 678px) {
+    @media (max-width: $tablet) {
       left: 1vw;
       width: 98vw;
       max-width: 525px;
@@ -83,8 +84,10 @@
     top: 731.88px;
     gap: 8px;
     align-items: flex-end;
-    @media (max-width: 380px) {
+    @media (max-width: $mobile) {
+      left: auto;
       top: auto;
+      right: 1px;
       bottom: 20px;
       gap: 3px;
     }
@@ -93,7 +96,7 @@
       font-size: 16px;
       color: $light-brown-color;
       transform: translateY(-1px);
-      @media (max-width: 380px) {
+      @media (max-width: $mobile) {
         font-size: 12px;
         width: auto;
       }
@@ -105,7 +108,7 @@
       background-size: cover;
       height: 32.15px;
       width: 22px;
-      @media (max-width: 380px) {
+      @media (max-width: $mobile) {
         height: 22.15px;
         width: 12px;
       }

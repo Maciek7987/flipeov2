@@ -19,27 +19,27 @@ body {
 h1 {
   font-weight: 700;
   font-size: 78px;
-  @media (max-width: 1200px) {
+  @media (max-width: $laptop) {
     font-size: 50px;
   }
-  @media (max-width: 600px) {
+  @media (max-width: $tablet) {
     font-size: 40px;
   }
 }
 h2 {
   font-weight: 700;
   font-size: 36px;
-  @media (max-width: 1200px) {
+  @media (max-width: $laptop) {
     font-size: 30px;
   }
-  @media (max-width: 838px) {
+  @media (max-width: $large-tablet) {
     font-size: 26px;
   }
 }
 h3 {
   font-weight: 700;
   font-size: 24px;
-  @media (max-width: 1200px) {
+  @media (max-width: $laptop) {
     font-size: 20px;
   }
 }
@@ -50,7 +50,7 @@ input {
   font-weight: 400;
   font-size: 16px;
   line-height: 160%;
-  @media (max-width: 1200px) {
+  @media (max-width: $laptop) {
     font-size: 13px;
   }
 }
@@ -61,21 +61,20 @@ input {
   font-weight: 500;
   font-size: 16px;
   cursor: pointer;
-  @media (max-width: 1200px) {
+  @media (max-width: $laptop) {
     font-size: 14px;
   }
 }
 
 .icon {
   position: absolute;
-  z-index: 90;
-  @media (max-width: 1200px) {
+  @media (max-width: $laptop) {
     transform: scale(1.7);
   }
-  @media (max-width: 600px) {
+  @media (max-width: $tablet) {
     transform: scale(3);
   }
-  @media (max-width: 400px) {
+  @media (max-width: $mobile) {
     transform: scale(4);
   }
 }
@@ -114,6 +113,7 @@ input {
     bottom: 87.88%;
     border-radius: 100%;
     background: #ffffff;
+    z-index: 9999999;
     &::before {
       content: "";
       position: absolute;
@@ -141,6 +141,7 @@ input {
   height: auto;
   margin: auto;
   padding: 20.05px 0 9.64px 0;
+  font-size: 16px;
   border-bottom: 1px solid $gray-color;
 }
 .wrapProfile {
@@ -213,14 +214,14 @@ input {
   border-radius: 100%;
   background-image: url("../public/images/section/buttonsArrow/left/Property1=default.svg");
   background-size: cover;
-  transition: background-color 0.2s ease-in-out;
-  @media (max-width: 1527px) {
+  transition: $transition-value;
+  @media (max-width: $three-products) {
     left: calc(346px) !important;
   }
-  @media (max-width: 1239px) {
+  @media (max-width: $two-products) {
     left: calc(58px) !important;
   }
-  @media (max-width: 678px) {
+  @media (max-width: $tablet) {
     left: 77px !important;
   }
   &:hover {
@@ -240,11 +241,11 @@ input {
   border-radius: 100%;
   background-image: url("../public/images/section/buttonsArrow/right/Property1=default-1.svg");
   background-size: cover;
-  transition: 0.2s ease-in-out;
-  @media (max-width: 952px) {
+  transition: $transition-value;
+  @media (max-width: $one-product) {
     left: 118px !important;
   }
-  @media (max-width: 678px) {
+  @media (max-width: $tablet) {
     left: 137px !important;
   }
   &:hover {

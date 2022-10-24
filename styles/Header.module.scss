@@ -3,11 +3,13 @@
 .header {
   width: 100%;
   height: 106.725vh;
-  min-height: 810px;
+  min-height: 100vh;
+  height: auto;
   background-color: $yellow-color;
   overflow: hidden;
-  @media (max-width: 1200px) {
-    .wrapper {
+  .wrapper {
+    margin-bottom: 6.8%;
+    @media (min-height: 800px) and (max-width: $laptop) {
       transform: translateY(20%) scale(1.4);
     }
   }
@@ -15,7 +17,7 @@
     width: 9vw;
     height: 5.336vh;
     margin-top: 44px;
-    @media (max-width: 678px) {
+    @media (max-width: $tablet) {
       width: 90px;
       height: auto;
     }
@@ -26,14 +28,14 @@
     width: 20.64vw;
     height: auto;
     margin-top: 15px;
-    @media (max-width: 678px) {
+    @media (max-width: $tablet) {
       display: none;
     }
   }
   &__main {
     display: flex;
     justify-content: space-between;
-    @media (max-width: 678px) {
+    @media (max-width: $tablet) {
       width: 100%;
       justify-content: center;
       text-align: center;
@@ -45,8 +47,8 @@
       color: $green-color;
       padding: 15px 23px 16px 23px;
       letter-spacing: -0.1px;
-      transition: border backgorund-color color 0.2s;
-      @media (max-width: 1200px) {
+      transition: $transition-value;
+      @media (min-height: 800px) and (max-width: $laptop) {
         transform: scale(0.8);
       }
       &:hover {
@@ -66,7 +68,7 @@
     border-top-left-radius: 0;
     background-color: $green-color;
     transform: translateY(-0.15%);
-    @media (max-width: 678px) {
+    @media (max-width: $tablet) {
       display: none;
     }
     .leaf {
@@ -89,36 +91,44 @@
     }
   }
   &__mainTitle {
-    width: 29vw;
+    width: 528px;
     height: auto;
     margin-left: -1%;
     margin-top: 63.47px;
     line-height: 110%;
     color: $brown-color;
     @media (max-width: 1900px) {
+      width: 473px;
       font-size: 70px;
     }
     @media (max-width: 1700px) {
+      width: 406px;
       font-size: 60px;
     }
     @media (max-width: 1500px) {
+      width: 338px;
       font-size: 50px;
     }
-    @media (max-width: 1200px) {
+    @media (max-width: $laptop) {
+      width: 244px;
       font-size: 36px;
     }
-    @media (max-width: 678px) {
+    @media (max-width: $large-tablet) {
+      width: 203px;
+      font-size: 30px;
+    }
+    @media (max-width: $tablet) {
       width: auto;
       margin-left: 0;
       font-size: 50px;
     }
-    @media (max-width: 500px) {
+    @media (max-width: $large-mobile) {
       font-size: 36px;
     }
-    @media (max-width: 380px) {
+    @media (max-width: $mobile) {
       font-size: 30px;
     }
-    @media (max-width: 300px) {
+    @media (max-width: $small-mobile) {
       font-size: 28px;
     }
   }
@@ -157,18 +167,16 @@
   .leavesRight {
     position: absolute;
     right: 0;
-    top: 58.603vh;
+    bottom: -4%;
     width: 10.942vw;
-    height: 44.61vh;
-    z-index: 90;
+    height: auto;
   }
   .leafBottom {
     position: absolute;
     left: 8.42vw;
-    bottom: -6.7vh;
+    bottom: -7%;
     width: 16.545vw;
     height: auto;
-    z-index: 90;
   }
   .leafTop {
     position: absolute;
