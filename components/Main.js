@@ -30,7 +30,9 @@ export default function Header() {
               Na flipeo.io łączymy radość dawania <br />i radość wybierania.
             </h3>
             <div className={styles.wrapForText}>
-              <Image className={styles.leaf} src={leafForStep1} alt="" />
+              <div className={styles.leaf}>
+                <Image src={leafForStep1} alt="" />
+              </div>
               <p className={styles.article__description}>
                 Są tacy którzy twierdzą że to niemożliwe, cóż, nic na to nie
                 poradzimy,
@@ -48,7 +50,9 @@ export default function Header() {
               sobą przedmiotami. Jak to działa ?
             </h3>
             <div className={styles.wrapForText}>
-              <Image className={styles.leaf} src={leafForStep2} alt="" />
+              <div className={styles.leaf}>
+                <Image className={styles.leaf} src={leafForStep2} alt="" />
+              </div>
               <p className={styles.article__description}>
                 Bardzo prosto, wystawiasz swoje przedmioty i wybierasz
                 przedmioty wystawione przez innych, a my gwarantujemy że za

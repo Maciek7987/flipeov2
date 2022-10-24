@@ -12,9 +12,7 @@ import mobileApp from "../public/images/footer/mobileApp.png";
 export default function Footer() {
   return (
     <footer className={styles.footer}>
-      <div className={`wrapper ${styles.wrapper}`}>
         <h1 className={styles.footer__title}>Dołącz do społeczności flipeo!</h1>
-      </div>
       <Image className={styles.mobileApp} src={mobileApp} alt="mobile app" />
       <Image className={`icon ${styles.glasses}`} src={glasses} alt="" />
       <Image className={`icon ${styles.plant}`} src={plant} alt="" />

@@ -12,6 +12,9 @@ body {
   background-color: $green-color;
   overflow-x: hidden;
 }
+#__next {
+  overflow: hidden;
+}
 
 h1 {
   font-weight: 700;
@@ -19,12 +22,18 @@ h1 {
   @media (max-width: 1200px) {
     font-size: 50px;
   }
+  @media (max-width: 600px) {
+    font-size: 40px;
+  }
 }
 h2 {
   font-weight: 700;
   font-size: 36px;
   @media (max-width: 1200px) {
     font-size: 30px;
+  }
+  @media (max-width: 838px) {
+    font-size: 26px;
   }
 }
 h3 {
@@ -62,6 +71,12 @@ input {
   z-index: 90;
   @media (max-width: 1200px) {
     transform: scale(1.7);
+  }
+  @media (max-width: 600px) {
+    transform: scale(3);
+  }
+  @media (max-width: 400px) {
+    transform: scale(4);
   }
 }
 
@@ -119,6 +134,7 @@ input {
   height: auto;
   object-fit: cover;
   border-top-left-radius: 20px;
+  filter: contrast(1.1);
 }
 .swiper-slide p {
   width: 220px;

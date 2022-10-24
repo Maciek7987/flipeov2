@@ -3,17 +3,23 @@
 .footer {
   position: relative;
   width: 100%;
-  height: 78.963vh;
-  min-height: 739.88px;
+  min-height: 800px;
+  @media (max-width: 380px) {
+    min-height: 700px;
+  }
   &__title {
-    align-self: flex-end;
-    transform: translateX(10px);
+    position: absolute;
     width: 31.75vw;
     height: auto;
-    margin-right: -57px;
-    margin-top: 284.87px;
+    top: 38%;
+    left: 51%;
     line-height: 110%;
     color: $light-grey-color;
+    z-index: 99999;
+    @media (max-width: 678px) {
+      top: 10%;
+      left: 10%;
+    }
   }
   .mobileApp {
     position: absolute;
@@ -24,6 +30,13 @@
     z-index: 91;
     @media (max-width: 1200px) {
       left: 20px;
+    }
+    @media (max-width: 678px) {
+      left: 1vw;
+      width: 98vw;
+      max-width: 525px;
+      top: auto;
+      bottom: 0;
     }
   }
   .glasses {
@@ -70,18 +83,32 @@
     top: 731.88px;
     gap: 8px;
     align-items: flex-end;
+    @media (max-width: 380px) {
+      top: auto;
+      bottom: 20px;
+      gap: 3px;
+    }
     p {
       width: 92px;
-      height: 26px;
       font-size: 16px;
       color: $light-brown-color;
       transform: translateY(-1px);
+      @media (max-width: 380px) {
+        font-size: 12px;
+        width: auto;
+      }
     }
 
     &::after {
-      content: url("../public/images/footer/gco-footer-logo.svg");
+      content: "";
+      background-image: url("../public/images/footer/gco-footer-logo.svg");
+      background-size: cover;
       height: 32.15px;
       width: 22px;
+      @media (max-width: 380px) {
+        height: 22.15px;
+        width: 12px;
+      }
     }
   }
 }

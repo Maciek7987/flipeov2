@@ -5,6 +5,7 @@
   height: 106.725vh;
   min-height: 810px;
   background-color: $yellow-color;
+  overflow: hidden;
   @media (max-width: 1200px) {
     .wrapper {
       transform: translateY(20%) scale(1.4);
@@ -14,6 +15,10 @@
     width: 9vw;
     height: 5.336vh;
     margin-top: 44px;
+    @media (max-width: 678px) {
+      width: 90px;
+      height: auto;
+    }
   }
   &__logo {
     position: relative;
@@ -21,11 +26,18 @@
     width: 20.64vw;
     height: auto;
     margin-top: 15px;
+    @media (max-width: 678px) {
+      display: none;
+    }
   }
   &__main {
     display: flex;
     justify-content: space-between;
-
+    @media (max-width: 678px) {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
     .btn {
       margin-top: 39px;
       border: 1px solid #fff;
@@ -50,10 +62,13 @@
     top: 0;
     width: 27.37vw;
     height: 27.37vw;
-    border-radius: 300px;
+    border-radius: 50%;
     border-top-left-radius: 0;
     background-color: $green-color;
     transform: translateY(-0.15%);
+    @media (max-width: 678px) {
+      display: none;
+    }
     .leaf {
       position: absolute;
       top: 1.605vh;
@@ -67,7 +82,7 @@
       position: absolute;
       left: 0;
       bottom: 0;
-      width: 38.875vw;
+      width: 142%;
       height: auto;
       transform: translate(-10.2%, 0.25%);
       z-index: 99;
@@ -91,6 +106,20 @@
     }
     @media (max-width: 1200px) {
       font-size: 36px;
+    }
+    @media (max-width: 678px) {
+      width: auto;
+      margin-left: 0;
+      font-size: 50px;
+    }
+    @media (max-width: 500px) {
+      font-size: 36px;
+    }
+    @media (max-width: 380px) {
+      font-size: 30px;
+    }
+    @media (max-width: 300px) {
+      font-size: 28px;
     }
   }
   .leavesLeft {
@@ -127,7 +156,7 @@
   }
   .leavesRight {
     position: absolute;
-    right: -0.524vw;
+    right: 0;
     top: 58.603vh;
     width: 10.942vw;
     height: 44.61vh;
